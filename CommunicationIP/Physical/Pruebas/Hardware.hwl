@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="Pruebas.Hardware.hw" LastWriteTime="07/06/2026 14:46:11" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="X20BB52" Type="X20BB52" X="100" Y="100" />
+    <Module Name="X20PS9600" Type="X20PS9600" X="125" Y="100" />
+    <Module Name="X20TB12" Type="X20TB12" X="125" Y="127" />
+    <Module Name="X20CP0482" Type="X20CP0482" X="100" Y="100" />
+    <Module Name="ModbusTcp_any" Type="ModbusTcp_any" X="297" Y="244" />
+    <Module Name="ModbusTcp_any1" Type="ModbusTcp_any" X="432" Y="244" />
+  </Modules>
+  <Links>
+    <Link From="X20CP0482" To="ModbusTcp_any" FromPort="IF2" ToPort="ETH1" IsRoutedByUser="False">
+      <Point X="331" Y="288" />
+      <Point X="331" Y="288" />
+      <Point X="331" Y="295" />
+      <Point X="331" Y="305" />
+      <Point X="114" Y="305" />
+      <Point X="114" Y="200" />
+      <Point X="114" Y="190" />
+      <Point X="114" Y="190" />
+    </Link>
+    <Link From="ModbusTcp_any" To="ModbusTcp_any1" FromPort="ETH2" ToPort="ETH1" IsRoutedByUser="False">
+      <Point X="356" Y="288" />
+      <Point X="356" Y="288" />
+      <Point X="356" Y="295" />
+      <Point X="356" Y="305" />
+      <Point X="466" Y="305" />
+      <Point X="466" Y="295" />
+      <Point X="466" Y="288" />
+      <Point X="466" Y="288" />
+    </Link>
+  </Links>
+  <InfoElements>
+    <InfoElementText Id="Textbox_1" X="279" Y="166" Width="133" Height="59">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">Barra Medir IP 172.16.1.50</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+    <InfoElementText Id="Textbox_2" X="432" Y="166" Width="133" Height="59">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">Stampador IP 172.16.1.20</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+  </InfoElements>
+</BR.AS.HardwareTopology>

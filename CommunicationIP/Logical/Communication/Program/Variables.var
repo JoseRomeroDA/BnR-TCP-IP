@@ -1,0 +1,5 @@
+VAR
+	Modbus : Modbus_typ;
+	TON_SendMessage : TON;
+	SendMessage : BOOL;
+END_VAR

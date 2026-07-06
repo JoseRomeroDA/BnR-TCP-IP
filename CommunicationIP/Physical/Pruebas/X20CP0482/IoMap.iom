@@ -1,0 +1,10 @@
+VAR_CONFIG
+	::Program:Modbus.SensorBar.StatusSensorBar AT %IB."ModbusTcp_any".StatusSensorBar;
+	::Program:Modbus.Stamper.Unit AT %QX."ModbusTcp_any1".UnitStamp;
+	::Program:Modbus.Stamper.Confirm AT %QX."ModbusTcp_any1".ConfirmStamp;
+	::Program:Modbus.Stamper.Measurement AT %QW."ModbusTcp_any1".MeasurementStamp;
+	::Program:Modbus.Stamper.Confirm AT %IX."ModbusTcp_any1".StamperConfirmed;
+	::Program:Modbus.Stamper.Unit AT %QB."ModbusTcp_any1".UnitStamp;
+	::Program:Modbus.Stamper.Confirm AT %QB."ModbusTcp_any1".ConfirmStamp;
+	::Program:Modbus.Stamper.Confirm AT %IB."ModbusTcp_any1".StampConfirmed;
+END_VAR
