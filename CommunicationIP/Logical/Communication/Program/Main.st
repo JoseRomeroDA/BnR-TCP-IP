@@ -15,7 +15,7 @@ PROGRAM _CYCLIC
 		TON_SendMessage.IN := TRUE;
 	END_IF;
 	
-	IF TON_SendMessage.Q AND (Modbus.Stamper.Confirm = 0)THEN
+	IF TON_SendMessage.Q AND (Modbus.Stamper.Confirm = 0) AND CommisionalMode THEN
 		TON_SendMessage.IN			:= FALSE;
 		Modbus.Stamper.Unit 		:= 1;		
 		Modbus.Stamper.Measurement 	:= Modbus.Stamper.Measurement + 1;
