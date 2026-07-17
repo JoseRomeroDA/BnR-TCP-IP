@@ -1,10 +1,29 @@
 VAR_CONFIG
-	::Program:Modbus.SensorBar.StatusSensorBar AT %IB."ModbusTcp_any".StatusSensorBar;
+	::ModbusTcp:Modbus.SensorBar.StatusSensorBar AT %IB."ModbusTcp_any".StatusSensorBar;
 	::Program:Modbus.Stamper.Unit AT %QX."ModbusTcp_any1".UnitStamp;
 	::Program:Modbus.Stamper.Confirm AT %QX."ModbusTcp_any1".ConfirmStamp;
 	::Program:Modbus.Stamper.Measurement AT %QW."ModbusTcp_any1".MeasurementStamp;
-	::Program:Modbus.Stamper.Confirm AT %IX."ModbusTcp_any1".StamperConfirmed;
+	::ModbusTcp:Modbus.MesuringStamper.Trigger AT %IX."ModbusTcp_any1".StamperConfirmed;
 	::Program:Modbus.Stamper.Unit AT %QB."ModbusTcp_any1".UnitStamp;
 	::Program:Modbus.Stamper.Confirm AT %QB."ModbusTcp_any1".ConfirmStamp;
 	::Program:Modbus.Stamper.Confirm AT %IB."ModbusTcp_any1".StampConfirmed;
+	::ModbusTcp:Modbus.MesuringStamper.Confirm AT %IX."ModbusTcp_any1".StampConfirmed;
+	::ModbusTcp:Modbus.MesuringStamper.Trigger AT %QX."ModbusTcp_any1".Trigger;
+	::ModbusTcp:Modbus.MesuringStamper.Unidad AT %QX."ModbusTcp_any1".Unit;
+	::ModbusTcp:Modbus.MesuringStamper.Digitos AT %QW."ModbusTcp_any1".Digitos;
+	::ModbusTcp:Modbus.MesuringStamper.Clase AT %QW."ModbusTcp_any1".Class;
+	::ModbusTcp:Modbus.BatchStamper.Trigger AT %QX."ModbusTcp_any2".Trigger;
+	::ModbusTcp:Modbus.BatchStamper.Digitos[1] AT %QW."ModbusTcp_any2".Digits1;
+	::ModbusTcp:Modbus.BatchStamper.Digitos[2] AT %QW."ModbusTcp_any2".Digits2;
+	::ModbusTcp:Modbus.BatchStamper.Trigger AT %IX."ModbusTcp_any2".StamperConfirmed;
+	::ModbusTcp:Modbus.MesuringStamper.Trigger AT %QW."ModbusTcp_any1".Trigger;
+	::ModbusTcp:Modbus.MesuringStamper.Unidad AT %QW."ModbusTcp_any1".Unit;
+	::ModbusTcp:Modbus.MesuringStamper.Trigger AT %IW."ModbusTcp_any1".StamperConfirmed;
+	::ModbusTcp:Modbus.SensorBar.StatusSensorBar AT %IW."ModbusTcp_any".StatusSensorBar;
+	::ModbusTcp:Modbus.BatchStamper.Trigger AT %QW."ModbusTcp_any2".Trigger;
+	::ModbusTcp:Modbus.BatchStamper.Trigger AT %IW."ModbusTcp_any2".StamperConfirmed;
+	::ModbusTcp:Modbus.MesuringStamper.Send AT %QX."ModbusTcp_any1".BlockSendOnce01;
+	::ModbusTcp:Modbus.MesuringStamper.SendOk AT %IX."ModbusTcp_any1".BlockSendOnceAck01;
+	::ModbusTcp:Modbus.BatchStamper.SendOk AT %IX."ModbusTcp_any2".BlockSendOnceAck01;
+	::ModbusTcp:Modbus.BatchStamper.Send AT %QX."ModbusTcp_any2".BlockSendOnce01;
 END_VAR

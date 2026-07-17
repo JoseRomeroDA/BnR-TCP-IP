@@ -3,4 +3,7 @@ VAR
 	TON_SendMessage : TON;
 	SendMessage : BOOL;
 	CommisionalMode : BOOL;
+	TON_SendBatchMessage : TON;
+	CommisionalMode2 : BOOL;
+	CommisionalMode1 : BOOL;
 END_VAR
