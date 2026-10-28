@@ -45,7 +45,7 @@
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="IpAddress" Value="172.16.1.30" />
-    <Parameter ID="UnitId" Value="2" />
+    <Parameter ID="Response" Value="-1" />
     <Group ID="Cb_1" />
     <Parameter ID="Cb_1_FunCode" Value="6" />
     <Parameter ID="Cb_1_SendMode" Value="2" />
