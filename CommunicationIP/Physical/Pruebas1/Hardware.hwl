@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?AutomationStudio FileVersion="4.9"?>
+<BR.AS.HardwareTopology>
+  <TimeStamps>
+    <TimeStamp LogicalPath="Pruebas1.Hardware.hw" LastWriteTime="10/28/2026 11:56:38" />
+  </TimeStamps>
+  <Modules>
+    <Module Name="ModbusTcp_any1" Type="ModbusTcp_any" X="566" Y="251" />
+    <Module Name="4PPC30_0702_23B" Type="4PPC30.0702-23B" X="307" Y="195" />
+  </Modules>
+  <Links>
+    <Link From="ModbusTcp_any1" To="4PPC30_0702_23B" FromPort="ETH1" ToPort="IF3" IsRoutedByUser="False">
+      <Point X="600" Y="295" />
+      <Point X="600" Y="295" />
+      <Point X="600" Y="302" />
+      <Point X="600" Y="315" />
+      <Point X="376.3" Y="315" />
+      <Point X="376.3" Y="302" />
+      <Point X="376.3" Y="297" />
+      <Point X="376.3" Y="297" />
+    </Link>
+  </Links>
+  <InfoElements>
+    <InfoElementText Id="Textbox_3" X="470" Y="181" Width="216" Height="59">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">Stampador MEDICION IP 172.16.1.30</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+    <InfoElementText Id="Textbox_6" X="279" Y="100" Width="654" Height="59">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left" />
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+  </InfoElements>
+</BR.AS.HardwareTopology>

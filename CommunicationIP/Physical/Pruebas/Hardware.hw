@@ -132,7 +132,7 @@
     <Connector Name="IF2">
       <Parameter ID="ActivateDevice" Value="1" />
       <Parameter ID="Mode" Value="Manual" />
-      <Parameter ID="InternetAddress" Value="172.16.1.95" />
+      <Parameter ID="InternetAddress" Value="192.16.1.95" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
       <Parameter ID="ActivateSnmp" Value="2" />
       <Parameter ID="ActivateModbus" Value="1" />
