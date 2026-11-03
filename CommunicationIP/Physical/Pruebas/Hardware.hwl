@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Pruebas.Hardware.hw" LastWriteTime="07/15/2026 14:46:11" />
+    <TimeStamp LogicalPath="Pruebas.Hardware.hw" LastWriteTime="11/03/2026 13:03:39" />
   </TimeStamps>
   <Modules>
     <Module Name="X20BB52" Type="X20BB52" X="307" Y="195" />
@@ -15,6 +15,16 @@
     <Module Name="ModbusTcp_any3" Type="ModbusTcp_any" X="472" Y="552" />
   </Modules>
   <Links>
+    <Link From="ModbusTcp_any2" To="X20CP0482" FromPort="ETH1" ToPort="IF2" IsRoutedByUser="False">
+      <Point X="516" Y="288" />
+      <Point X="516" Y="288" />
+      <Point X="516" Y="295" />
+      <Point X="516" Y="305" />
+      <Point X="321" Y="305" />
+      <Point X="321" Y="295" />
+      <Point X="321" Y="285" />
+      <Point X="321" Y="285" />
+    </Link>
     <Link From="ModbusTcp_any" To="ModbusTcp_any1" FromPort="ETH1" ToPort="ETH2" IsRoutedByUser="False">
       <Point X="986" Y="288" />
       <Point X="986" Y="288" />
@@ -34,16 +44,6 @@
       <Point X="742" Y="295" />
       <Point X="742" Y="288" />
       <Point X="742" Y="288" />
-    </Link>
-    <Link From="ModbusTcp_any2" To="X20CP0482" FromPort="ETH1" ToPort="IF2" IsRoutedByUser="False">
-      <Point X="516" Y="288" />
-      <Point X="516" Y="288" />
-      <Point X="516" Y="295" />
-      <Point X="516" Y="305" />
-      <Point X="321" Y="305" />
-      <Point X="321" Y="295" />
-      <Point X="321" Y="285" />
-      <Point X="321" Y="285" />
     </Link>
   </Links>
   <InfoElements>
