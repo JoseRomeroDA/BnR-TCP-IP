@@ -14,7 +14,6 @@
       <Parameter ID="NumAllBlocks" Value="-1" />
       <Parameter ID="MemSizeIn" Value="-1" />
       <Parameter ID="MemSizeOut" Value="-1" />
-      <Parameter ID="SlaveDiagnostics" Value="1" />
       <Parameter ID="DeviceParam" Value="/EDDN=gem" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="CommunicationIP_Pruebas" />
@@ -66,38 +65,47 @@
     <Parameter ID="Response" Value="-1" />
     <Group ID="Cb_1" />
     <Parameter ID="Cb_1_FunCode" Value="6" />
-    <Parameter ID="Cb_1_SendMode" Value="2" />
-    <Parameter ID="Cb_1_AddrExt" Description="Escritura del registro &quot;1&quot; para confirmar estampado" />
+    <Parameter ID="Cb_1_AddrExt" Description="Escritura del registro &quot;0&quot; para confirmar estampado" />
     <Group ID="Cb_1_C_1" />
-    <Parameter ID="Cb_1_C_1_Name" Value="Trigger" />
-    <Parameter ID="Cb_1_C_1_Datatype" Value="6" />
-    <Parameter ID="Cb_1_C_1_Dir" Value="1" />
+    <Parameter ID="Cb_1_C_1_Name" Value="Trigger" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_1_C_1_Datatype" Value="6" Description="* * * COMANDO DE ESCRITURA PARA ENVIO DE DATOS " />
+    <Parameter ID="Cb_1_C_1_Dir" Value="1" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
     <Group ID="Cb_2" />
-    <Parameter ID="Cb_2_FunCode" Value="6" />
-    <Parameter ID="Cb_2_AddrExt" Value="1" Description="Escritura del registro &quot;2&quot; para la unidad de la medicion" />
+    <Parameter ID="Cb_2_FunCode" Value="3" />
+    <Parameter ID="Cb_2_AddrExt" Description="Lectura del registro &quot;0&quot; para confirmar estampado" />
     <Group ID="Cb_2_C_1" />
-    <Parameter ID="Cb_2_C_1_Name" Value="Unit" />
-    <Parameter ID="Cb_2_C_1_Datatype" Value="6" />
-    <Parameter ID="Cb_2_C_1_Dir" Value="1" />
+    <Parameter ID="Cb_2_C_1_Name" Value="StamperConfirmed" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_2_C_1_Datatype" Value="6" Description="* * * STATUS DE LECTURA DEL ENVIO DE DATOS" />
+    <Parameter ID="Cb_2_C_1_Dir" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
     <Group ID="Cb_3" />
     <Parameter ID="Cb_3_FunCode" Value="6" />
-    <Parameter ID="Cb_3_AddrExt" Value="2" Description="Escritura del registro &quot;3&quot; dedicado para digitos de la medicion" />
+    <Parameter ID="Cb_3_AddrExt" Value="1" Description="Escritura del registro &quot;1&quot; para la unidad de la medicion" />
     <Group ID="Cb_3_C_1" />
-    <Parameter ID="Cb_3_C_1_Name" Value="Digitos" />
-    <Parameter ID="Cb_3_C_1_Datatype" Value="6" />
-    <Parameter ID="Cb_3_C_1_Dir" Value="1" />
+    <Parameter ID="Cb_3_C_1_Name" Value="Unit" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_3_C_1_Datatype" Value="6" Description="* * * ESCRITURA DE LA UNIDAD DE MEDICION " />
+    <Parameter ID="Cb_3_C_1_Dir" Value="1" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
     <Group ID="Cb_4" />
     <Parameter ID="Cb_4_FunCode" Value="6" />
-    <Parameter ID="Cb_4_AddrExt" Value="3" />
+    <Parameter ID="Cb_4_AddrExt" Value="2" Description="Escritura del registro &quot;2&quot; dedicado para digitos de la medicion" />
     <Group ID="Cb_4_C_1" />
-    <Parameter ID="Cb_4_C_1_Name" Value="Class" />
-    <Parameter ID="Cb_4_C_1_Datatype" Value="6" />
-    <Parameter ID="Cb_4_C_1_Dir" Value="1" />
+    <Parameter ID="Cb_4_C_1_Name" Value="Digitos" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_4_C_1_Datatype" Value="6" Description="* * * ESCRITURA DE LA MEDICION " />
+    <Parameter ID="Cb_4_C_1_Dir" Value="1" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
     <Group ID="Cb_5" />
-    <Parameter ID="Cb_5_FunCode" Value="3" />
+    <Parameter ID="Cb_5_FunCode" Value="6" />
+    <Parameter ID="Cb_5_AddrExt" Value="3" Description="Escritura del registro &quot;3&quot; dedicado para la clase de la medicion" />
     <Group ID="Cb_5_C_1" />
-    <Parameter ID="Cb_5_C_1_Name" Value="StamperConfirmed" />
-    <Parameter ID="Cb_5_C_1_Datatype" Value="6" />
+    <Parameter ID="Cb_5_C_1_Name" Value="Class" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_5_C_1_Datatype" Value="6" Description="* * * ESCRITURA DE LA CLASE" />
+    <Parameter ID="Cb_5_C_1_Dir" Value="1" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Group ID="Cb_6" />
+    <Parameter ID="Cb_6_FunCode" Value="6" />
+    <Parameter ID="Cb_6_SendMode" Value="2" />
+    <Parameter ID="Cb_6_AddrExt" Value="4" Description="Escritura del registro &quot;4&quot; con el parametro de calentamiento de las tarjetas de segmentos" />
+    <Group ID="Cb_6_C_1" />
+    <Parameter ID="Cb_6_C_1_Name" Value="warmingTime" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_6_C_1_Datatype" Value="6" Description="ESCRITURA DEL PARAMETRO DE CALENTAMIENTO" />
+    <Parameter ID="Cb_6_C_1_Dir" Value="1" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
   </Module>
   <Module Name="ModbusTcp_any3" Type="ModbusTcp_any" Version="1.1.1.0">
     <Connection Connector="ETH1" TargetModule="4PPC30_0702_23B" TargetConnector="IF3">
@@ -110,29 +118,47 @@
     <Parameter ID="Response" Value="-1" />
     <Group ID="Cb_1" />
     <Parameter ID="Cb_1_FunCode" Value="6" />
-    <Parameter ID="Cb_1_SendMode" Value="2" />
+    <Parameter ID="Cb_1_AddrExt" Description="Escritura del registro &quot;0&quot; para confirmar estampado" />
     <Group ID="Cb_1_C_1" />
-    <Parameter ID="Cb_1_C_1_Name" Value="Trigger" />
-    <Parameter ID="Cb_1_C_1_Datatype" Value="6" />
-    <Parameter ID="Cb_1_C_1_Dir" Value="1" />
+    <Parameter ID="Cb_1_C_1_Name" Value="Trigger" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_1_C_1_Datatype" Value="6" Description="* * * COMANDO DE ESCRITURA PARA ENVIO DE DATOS " />
+    <Parameter ID="Cb_1_C_1_Dir" Value="1" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
     <Group ID="Cb_2" />
-    <Parameter ID="Cb_2_FunCode" Value="6" />
-    <Parameter ID="Cb_2_AddrExt" Value="1" />
+    <Parameter ID="Cb_2_FunCode" Value="3" />
+    <Parameter ID="Cb_2_AddrExt" Description="Lectura del registro &quot;0&quot; para confirmar estampado" />
     <Group ID="Cb_2_C_1" />
-    <Parameter ID="Cb_2_C_1_Name" Value="Digits1" />
-    <Parameter ID="Cb_2_C_1_Datatype" Value="6" />
-    <Parameter ID="Cb_2_C_1_Dir" Value="1" />
+    <Parameter ID="Cb_2_C_1_Name" Value="TriggerConfirmed" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_2_C_1_Datatype" Value="6" Description="* * * STATUS DE LECTURA DEL ENVIO DE DATOS" />
+    <Parameter ID="Cb_2_C_1_Dir" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
     <Group ID="Cb_3" />
     <Parameter ID="Cb_3_FunCode" Value="6" />
-    <Parameter ID="Cb_3_AddrExt" Value="2" />
+    <Parameter ID="Cb_3_AddrExt" Value="1" Description="Escritura del registro &quot;1&quot; con el primer grupo del lote" />
     <Group ID="Cb_3_C_1" />
-    <Parameter ID="Cb_3_C_1_Name" Value="Digits2" />
-    <Parameter ID="Cb_3_C_1_Datatype" Value="6" />
-    <Parameter ID="Cb_3_C_1_Dir" Value="1" />
+    <Parameter ID="Cb_3_C_1_Name" Value="Digits1" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_3_C_1_Datatype" Value="6" Description="* * PRIMER GRUPO DEL LOTE - 123" />
+    <Parameter ID="Cb_3_C_1_Dir" Value="1" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
     <Group ID="Cb_4" />
-    <Parameter ID="Cb_4_FunCode" Value="3" />
+    <Parameter ID="Cb_4_FunCode" Value="6" />
+    <Parameter ID="Cb_4_AddrExt" Value="2" Description="Escritura del registro &quot;2&quot; con el segundo grupo del lote" />
     <Group ID="Cb_4_C_1" />
-    <Parameter ID="Cb_4_C_1_Name" Value="StamperConfirmed" />
-    <Parameter ID="Cb_4_C_1_Datatype" Value="6" />
+    <Parameter ID="Cb_4_C_1_Name" Value="Digits2" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_4_C_1_Datatype" Value="6" Description="* * SEGUNDO GRUPO DEL LOTE - 456" />
+    <Parameter ID="Cb_4_C_1_Dir" Value="1" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Group ID="Cb_5" />
+    <Parameter ID="Cb_5_FunCode" Value="6" />
+    <Parameter ID="Cb_5_SendMode" Value="2" />
+    <Parameter ID="Cb_5_AddrExt" Value="3" Description="Escritura del registro &quot;3&quot; con el parametro de calentamiento de las tarjetas de segmentos" />
+    <Group ID="Cb_5_C_1" />
+    <Parameter ID="Cb_5_C_1_Name" Value="warmingTime" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_5_C_1_Datatype" Value="6" Description="* * PARAMETRO - TIEMPO DE CALENTAMIENTO a + parametro" />
+    <Parameter ID="Cb_5_C_1_Dir" Value="1" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Group ID="Cb_6" />
+    <Parameter ID="Cb_6_FunCode" Value="6" />
+    <Parameter ID="Cb_6_SendMode" Value="2" />
+    <Parameter ID="Cb_6_AddrExt" Value="4" />
+    <Group ID="Cb_6_C_1" />
+    <Parameter ID="Cb_6_C_1_Name" Value="motorTime" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
+    <Parameter ID="Cb_6_C_1_Datatype" Value="6" Description="* * PARAMETRO - TIEMPO DE ACTIVACION DE MOTOR" />
+    <Parameter ID="Cb_6_C_1_Dir" Value="1" Description="* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" />
   </Module>
 </Hardware>

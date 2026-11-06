@@ -57,6 +57,14 @@
     <Group ID="Cb_5_C_1" />
     <Parameter ID="Cb_5_C_1_Name" Value="StamperConfirmed" />
     <Parameter ID="Cb_5_C_1_Datatype" Value="6" />
+    <Group ID="Cb_6" />
+    <Parameter ID="Cb_6_FunCode" Value="6" />
+    <Parameter ID="Cb_6_SendMode" Value="2" />
+    <Parameter ID="Cb_6_AddrExt" Value="4" />
+    <Group ID="Cb_6_C_1" />
+    <Parameter ID="Cb_6_C_1_Name" Value="warmingTime" />
+    <Parameter ID="Cb_6_C_1_Datatype" Value="6" />
+    <Parameter ID="Cb_6_C_1_Dir" Value="1" />
   </Module>
   <Module Name="ModbusTcp_any2" Type="ModbusTcp_any" Version="1.1.1.0">
     <Connection Connector="ETH1" TargetModule="X20CP0482" TargetConnector="IF2">
@@ -93,6 +101,19 @@
     <Group ID="Cb_4_C_1" />
     <Parameter ID="Cb_4_C_1_Name" Value="StamperConfirmed" />
     <Parameter ID="Cb_4_C_1_Datatype" Value="6" />
+    <Group ID="Cb_5" />
+    <Parameter ID="Cb_5_FunCode" Value="16" />
+    <Parameter ID="Cb_5_SendMode" Value="2" />
+    <Parameter ID="Cb_5_AddrExt" Value="3" />
+    <Parameter ID="Cb_5_NumItemsExt" Value="2" />
+    <Group ID="Cb_5_C_1" />
+    <Parameter ID="Cb_5_C_1_Name" Value="warmingTime" />
+    <Parameter ID="Cb_5_C_1_Datatype" Value="6" />
+    <Parameter ID="Cb_5_C_1_Dir" Value="1" />
+    <Group ID="Cb_5_C_2" />
+    <Parameter ID="Cb_5_C_2_Name" Value="mototTime" />
+    <Parameter ID="Cb_5_C_2_Datatype" Value="6" />
+    <Parameter ID="Cb_5_C_2_Dir" Value="1" />
   </Module>
   <Module Name="ModbusTcp_any3" Type="ModbusTcp_any" Version="1.1.1.0" Disabled="true">
     <Connector Name="ETH2" Disabled="true" />

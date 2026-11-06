@@ -2,54 +2,59 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Pruebas1.Hardware.hw" LastWriteTime="11/03/2026 13:44:48" />
+    <TimeStamp LogicalPath="Pruebas1.Hardware.hw" LastWriteTime="11/06/2026 13:42:05" />
   </TimeStamps>
   <Modules>
-    <Module Name="ModbusTcp_any1" Type="ModbusTcp_any" X="693" Y="341" />
+    <Module Name="ModbusTcp_any1" Type="ModbusTcp_any" X="946" Y="341" />
     <Module Name="4PPC30_0702_23B" Type="4PPC30.0702-23B" X="307" Y="195" />
-    <Module Name="ModbusTcp_any" Type="ModbusTcp_any" X="897" Y="352" />
-    <Module Name="ModbusTcp_any3" Type="ModbusTcp_any" X="514" Y="341" />
+    <Module Name="ModbusTcp_any" Type="ModbusTcp_any" X="1302" Y="341" />
+    <Module Name="ModbusTcp_any3" Type="ModbusTcp_any" X="591" Y="341" />
   </Modules>
   <Links>
-    <Link From="ModbusTcp_any3" To="ModbusTcp_any1" FromPort="ETH2" ToPort="ETH1" IsRoutedByUser="False">
-      <Point X="573" Y="385" />
-      <Point X="573" Y="385" />
-      <Point X="573" Y="392" />
-      <Point X="573" Y="405" />
-      <Point X="727" Y="405" />
-      <Point X="727" Y="392" />
-      <Point X="727" Y="385" />
-      <Point X="727" Y="385" />
-    </Link>
-    <Link From="ModbusTcp_any1" To="ModbusTcp_any" FromPort="ETH2" ToPort="ETH1" IsRoutedByUser="False">
-      <Point X="752" Y="385" />
-      <Point X="752" Y="385" />
-      <Point X="752" Y="392" />
-      <Point X="752" Y="415" />
-      <Point X="931" Y="415" />
-      <Point X="931" Y="403" />
-      <Point X="931" Y="396" />
-      <Point X="931" Y="396" />
-    </Link>
-    <Link From="ModbusTcp_any3" To="4PPC30_0702_23B" FromPort="ETH1" ToPort="IF3" IsRoutedByUser="False">
-      <Point X="548" Y="385" />
-      <Point X="548" Y="385" />
-      <Point X="548" Y="392" />
-      <Point X="548" Y="405" />
-      <Point X="376.3" Y="405" />
+    <Link From="4PPC30_0702_23B" To="ModbusTcp_any3" FromPort="IF3" ToPort="ETH1" IsRoutedByUser="False">
+      <Point X="376.3" Y="297" />
+      <Point X="376.3" Y="297" />
       <Point X="376.3" Y="302" />
-      <Point X="376.3" Y="297" />
-      <Point X="376.3" Y="297" />
+      <Point X="376.3" Y="398" />
+      <Point X="625" Y="398" />
+      <Point X="625" Y="392" />
+      <Point X="625" Y="385" />
+      <Point X="625" Y="385" />
+    </Link>
+    <Link From="ModbusTcp_any" To="ModbusTcp_any1" FromPort="ETH1" ToPort="ETH2" IsRoutedByUser="False">
+      <Point X="1336" Y="385" />
+      <Point X="1336" Y="385" />
+      <Point X="1336" Y="392" />
+      <Point X="1336" Y="405" />
+      <Point X="1005" Y="405" />
+      <Point X="1005" Y="392" />
+      <Point X="1005" Y="385" />
+      <Point X="1005" Y="385" />
+    </Link>
+    <Link From="ModbusTcp_any1" To="ModbusTcp_any3" FromPort="ETH1" ToPort="ETH2" IsRoutedByUser="False">
+      <Point X="980" Y="385" />
+      <Point X="980" Y="385" />
+      <Point X="980" Y="392" />
+      <Point X="980" Y="405" />
+      <Point X="650" Y="405" />
+      <Point X="650" Y="392" />
+      <Point X="650" Y="385" />
+      <Point X="650" Y="385" />
     </Link>
   </Links>
   <InfoElements>
-    <InfoElementText Id="Textbox_3" X="652" Y="256" Width="184" Height="59">
-      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">Stampador MEDICION IP 172.16.1.30</Text>
+    <InfoElementText Id="Textbox_3" X="879" Y="243" Width="231" Height="74">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">STAMPADOR MEDICION IP 172.16.1.30</Text>
       <Background Color="White" Transparent="False" />
       <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
     </InfoElementText>
-    <InfoElementText Id="Textbox_6" X="279" Y="100" Width="654" Height="59">
-      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left" />
+    <InfoElementText Id="Textbox_7" X="545" Y="243" Width="196" Height="74">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">STAMPADOR LOTE IP 172.16.1.20</Text>
+      <Background Color="White" Transparent="False" />
+      <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
+    </InfoElementText>
+    <InfoElementText Id="Textbox_9" X="1221" Y="243" Width="189" Height="74">
+      <Text Color="Black" FontName="Arial" FontSize="12" FontStyle="Regular" AlignmentHorizontal="Left">BARRA DE MEDIR IP 172.16.1.50</Text>
       <Background Color="White" Transparent="False" />
       <Border Color="Black" Transparent="False" DashStyle="Solid" Width="1" />
     </InfoElementText>

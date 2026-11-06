@@ -26,4 +26,12 @@ VAR_CONFIG
 	::ModbusTcp:Modbus.MesuringStamper.SendOk AT %IX."ModbusTcp_any1".BlockSendOnceAck01;
 	::ModbusTcp:Modbus.BatchStamper.SendOk AT %IX."ModbusTcp_any2".BlockSendOnceAck01;
 	::ModbusTcp:Modbus.BatchStamper.Send AT %QX."ModbusTcp_any2".BlockSendOnce01;
+	::ModbusTcp:Modbus.BatchStamper.SendParam AT %QX."ModbusTcp_any2".BlockSendOnce05;
+	::ModbusTcp:Modbus.BatchStamper.SendParamOk AT %IX."ModbusTcp_any2".BlockSendOnceAck05;
+	::ModbusTcp:Modbus.BatchStamper.param.warmingTime AT %QW."ModbusTcp_any2".warmingTime;
+	::ModbusTcp:Modbus.BatchStamper.param.motorTime AT %QW."ModbusTcp_any2".motorTime;
+	::ModbusTcp:Modbus.MesuringStamper.SendParam AT %QX."ModbusTcp_any1".BlockSendOnce06;
+	::ModbusTcp:Modbus.MesuringStamper.SendParamOk AT %IX."ModbusTcp_any1".BlockSendOnceAck06;
+	::ModbusTcp:Modbus.MesuringStamper.param.warmingTime AT %QW."ModbusTcp_any1".warmingTime;
+	::ModbusTcp:Modbus.BatchStamper.param.motorTime AT %QW."ModbusTcp_any2".mototTime;
 END_VAR

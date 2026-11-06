@@ -1,9 +1,9 @@
 VAR
 	Modbus : Modbus_typ;
-	TON_SendMessage : TON;
-	SendMessage : BOOL;
-	CommisionalMode : BOOL;
-	TON_SendBatchMessage : TON;
-	CommisionalMode2 : BOOL;
-	CommisionalMode1 : BOOL;
+	OldParamMotorTimeBatch : UINT;
+	OldParamWarmingTimeMeasuring : UINT;
+	OldParamWarmingTimeBatch : UINT;
+	TON_MotorTime : TON;
+	TON_AutoMode : TON;
+	TimeIdle : UINT;
 END_VAR
