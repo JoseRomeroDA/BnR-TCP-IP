@@ -3,7 +3,7 @@ TYPE
 	Modbus_typ : 	STRUCT 
 		cmd : Modbus_cmd_typ;
 		state : Modbus_state_typ;
-		mesuringStamper : MeasuringStamper_typ;
+		measuringStamper : MeasuringStamper_typ;
 		batchStamper : BatchStamper_typ;
 		sensorBar : SensorBar_typ;
 	END_STRUCT;
@@ -18,32 +18,42 @@ TYPE
 		MODBUS_AUT_SEND_DATA := 20
 		);
 	MeasuringStamper_typ : 	STRUCT 
+		ModuleOk : BOOL;
 		trigger : UINT;
 		unit : UINT;
 		digits : UINT;
 		class : UINT;
-		param : Modbus_param_typ;
 		sendMeasuring : BOOL;
 		sendMeasuringOk : BOOL;
 		sendParamWarming : BOOL;
 		sendParamWarmingOk : BOOL;
+		param : Measuring_param_typ;
 	END_STRUCT;
 	BatchStamper_typ : 	STRUCT 
+		ModuleOk : BOOL;
 		trigger : UINT;
 		digits : ARRAY[1..2]OF UINT;
-		param : Modbus_param_typ;
 		sendBatch : BOOL;
 		sendBatchOk : BOOL;
 		sendParamMotorOk : BOOL;
 		sendParamMotor : BOOL;
 		sendParamWarming : BOOL;
 		sendParamWarmingOk : BOOL;
+		param : Batch_param_typ;
 	END_STRUCT;
 	SensorBar_typ : 	STRUCT 
+		ModuleOk : BOOL;
 		statusSensorBar : UINT;
 	END_STRUCT;
 	Modbus_param_typ : 	STRUCT 
-		warmingTime : UINT; (*Tiempo de calentamiento de placas*)
-		motorTime : UINT; (*Tiempo de avance de motor*)
+		warmingTime : ARRAY[1..2]OF UINT; (*Tiempo de calentamiento de placas*)
+		motorTime : ARRAY[1..2]OF UINT; (*Tiempo de avance de motor*)
+	END_STRUCT;
+	Measuring_param_typ : 	STRUCT 
+		warmingTime : UINT;
+	END_STRUCT;
+	Batch_param_typ : 	STRUCT 
+		warmingTime : UINT;
+		motorTime : UINT;
 	END_STRUCT;
 END_TYPE

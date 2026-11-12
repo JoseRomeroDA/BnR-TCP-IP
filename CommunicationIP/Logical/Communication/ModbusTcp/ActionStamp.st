@@ -2,7 +2,7 @@ ACTION actParameters:
 	(* Parametros de tiempo de calentamiento y avance de motor *) 
 	
 	(*LOTE - TIEMPO DE AVANCE DEL MOTOR DEL RIBBON*) 
-	Modbus.batchStamper.param.motorTime;
+	Modbus.batchStamper.param.motorTime := ModbusParam.motorTime[1];
 	IF ((Modbus.batchStamper.param.motorTime <> OldParamMotorTimeBatch)
 		AND NOT(Modbus.batchStamper.sendBatchOk)) THEN
 		Modbus.batchStamper.sendParamMotor	:= TRUE;
@@ -13,7 +13,7 @@ ACTION actParameters:
 	END_IF
 	
 	(* LOTE - TIEMPO DE CALENTAMIENTO DE LA TARJETA DE ESTAMPADO *)
-	Modbus.batchStamper.param.warmingTime;
+	Modbus.batchStamper.param.warmingTime	:= ModbusParam.warmingTime[1];
 	IF ((Modbus.batchStamper.param.warmingTime <> OldParamWarmingTimeBatch)
 		AND NOT(Modbus.batchStamper.sendParamWarmingOk)) THEN
 		Modbus.batchStamper.sendParamWarming:= TRUE;
@@ -24,14 +24,14 @@ ACTION actParameters:
 	END_IF
 	
 	(*MEDICION - TIEMPO DE CALENTAMIENTO DE LA TARJETA DE ESTAMPADO*)
-	Modbus.mesuringStamper.param.warmingTime;
-	IF ((Modbus.mesuringStamper.param.warmingTime <> OldParamWarmingTimeMeasuring)
-		AND NOT(Modbus.mesuringStamper.sendParamWarmingOk)) THEN
-		Modbus.mesuringStamper.sendParamWarming := TRUE;
+	Modbus.measuringStamper.param.warmingTime	:= ModbusParam.warmingTime[2];
+	IF ((Modbus.measuringStamper.param.warmingTime <> OldParamWarmingTimeMeasuring)
+		AND NOT(Modbus.measuringStamper.sendParamWarmingOk)) THEN
+		Modbus.measuringStamper.sendParamWarming := TRUE;
 	END_IF
-	IF Modbus.mesuringStamper.sendParamWarmingOk THEN
-		OldParamWarmingTimeMeasuring	:= Modbus.mesuringStamper.param.warmingTime;
-		Modbus.mesuringStamper.sendParamWarming	:= FALSE;
+	IF Modbus.measuringStamper.sendParamWarmingOk THEN
+		OldParamWarmingTimeMeasuring	:= Modbus.measuringStamper.param.warmingTime;
+		Modbus.measuringStamper.sendParamWarming	:= FALSE;
 	END_IF;
 
 	(* Parametros de tiempo para el motor y el modo automatico *)
@@ -49,17 +49,17 @@ END_ACTION
 ACTION actMeasurement: 
 	
 	(* Datos de medicion *) 
-	Modbus.mesuringStamper.unit	:= 1;
-	Modbus.mesuringStamper.digits	:= Modbus.mesuringStamper.digits + 1;
-	Modbus.mesuringStamper.class	:= Modbus.mesuringStamper.class + 1;
+	Modbus.measuringStamper.unit	:= 1;
+	Modbus.measuringStamper.digits	:= Modbus.measuringStamper.digits + 1;
+	Modbus.measuringStamper.class	:= Modbus.measuringStamper.class + 1;
 	
 	(* Aumento variables en digitos *)
-	IF Modbus.mesuringStamper.digits >= 999 THEN 
-		Modbus.mesuringStamper.digits := 0;
+	IF Modbus.measuringStamper.digits >= 999 THEN 
+		Modbus.measuringStamper.digits := 0;
 	END_IF;
 	(* Aumento variables en clase *)
-	IF Modbus.mesuringStamper.class >= 9 THEN
-		Modbus.mesuringStamper.class := 0;
+	IF Modbus.measuringStamper.class >= 9 THEN
+		Modbus.measuringStamper.class := 0;
 	END_IF;
 	
 END_ACTION

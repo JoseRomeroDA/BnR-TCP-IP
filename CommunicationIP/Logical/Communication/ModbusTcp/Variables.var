@@ -7,3 +7,6 @@ VAR
 	TON_AutoMode : TON;
 	TimeIdle : UINT;
 END_VAR
+VAR RETAIN
+	ModbusParam : Modbus_param_typ;
+END_VAR

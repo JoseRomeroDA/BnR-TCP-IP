@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Pruebas1.Hardware.hw" LastWriteTime="11/06/2026 13:42:05" />
+    <TimeStamp LogicalPath="Pruebas1.Hardware.hw" LastWriteTime="11/06/2026 13:46:06" />
   </TimeStamps>
   <Modules>
     <Module Name="ModbusTcp_any1" Type="ModbusTcp_any" X="946" Y="341" />

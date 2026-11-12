@@ -8,6 +8,7 @@
       <Parameter ID="InternetAddress" Value="172.16.1.95" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
       <Parameter ID="InaNodeNumber" Value="0" />
+      <Group ID="Vnc1" />
       <Parameter ID="ActivateSnmp" Value="2" />
       <Parameter ID="ActivateModbus" Value="1" />
       <Parameter ID="NumSlaves" Value="-1" />
@@ -37,6 +38,8 @@
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="USER" />
     <Parameter ID="FileDevicePath1" Value="USER_PATH" />
+    <Parameter ID="ActivateOpcUa" Value="1" />
+    <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
     <Parameter ID="KeyMappingFile" Value="VC\4PPC30_0702_23B.dis" />
   </Module>
   <Module Name="ModbusTcp_any" Type="ModbusTcp_any" Version="1.1.1.0">

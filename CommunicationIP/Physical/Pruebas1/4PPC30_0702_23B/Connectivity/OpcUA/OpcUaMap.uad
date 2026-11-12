@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="M4.93">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <Task Name="ModbusTcp">
+        <Variable Name="Modbus">
+          <Variable Name="cmd">
+            <Variable Name="manualMode" />
+            <Variable Name="autoMode" />
+          </Variable>
+          <Variable Name="sensorBar">
+            <Variable Name="statusSensorBar" />
+            <Variable Name="ModuleOk" />
+          </Variable>
+          <Variable Name="batchStamper">
+            <Variable Name="digits" RecursiveEnable="2" />
+            <Variable Name="ModuleOk" />
+          </Variable>
+          <Variable Name="measuringStamper">
+            <Variable Name="ModuleOk" />
+            <Variable Name="unit" />
+            <Variable Name="digits" />
+            <Variable Name="class" />
+          </Variable>
+        </Variable>
+        <Variable Name="ModbusParam">
+          <Variable Name="warmingTime" RecursiveEnable="2" />
+          <Variable Name="motorTime" RecursiveEnable="2" />
+        </Variable>
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>
